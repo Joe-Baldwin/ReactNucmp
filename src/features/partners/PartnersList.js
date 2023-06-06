@@ -1,4 +1,4 @@
-import Partner from "../../components/Partner";
+import Partner from "./Partner";
 import { selectAllPartners } from "./partnersSlice";
 import {Col} from 'reactstrap';
 
