@@ -16,6 +16,6 @@ export const selectAllPartners = (state) => {
     return state.partners.partnersArray;
 };
 
-export const selectFeaturedPartner = (state) => {
+export const selectFeaturedPartners = (state) => {
     return state.partners.partnersArray.find((partner) => partner.featured);
 };
