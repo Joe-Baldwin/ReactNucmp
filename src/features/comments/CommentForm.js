@@ -41,16 +41,16 @@ const CommentForm = ({campsiteId}) => {
                         <FormGroup>
                             <Label htmlFor="rating"> Rating </Label>
                             <Field
-                                        name='rating'
-                                        as='select'
-                                        className='form-control'
-                                    >
-                                        <option>Select...</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
+                                name='rating'
+                                as='select'
+                                className='form-control'
+                            >
+                                <option>Select...</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
                             </Field>
                             <ErrorMessage name="rating">
                                 {(msg) => <p className='text-danger'>{msg}</p>}
@@ -60,9 +60,9 @@ const CommentForm = ({campsiteId}) => {
                         <FormGroup>
                             <Label htmlFor="author"> Author </Label>
                             <Field
-                                        name='author'
-                                        placeholder='Your Name'
-                                        className='form-control'
+                                name='author'
+                                placeholder='Your Name'
+                                className='form-control'
                             />
                             <ErrorMessage name="author">
                                 {(msg) => <p className='text-danger'>{msg}</p>}
