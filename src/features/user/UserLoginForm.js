@@ -12,7 +12,7 @@ import {
 } from 'reactstrap';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import defaultAvatar from '../../app/assets/img/unicorn.png';
-import { validateLoginForm } from '../../utils/validateUserLoginForm';
+import { validateUserLoginForm } from '../../utils/validateUserLoginForm';
 
 const UserLoginForm = () => {
     const [loginModalOpen, setLoginModalOpen] = useState(false);
@@ -54,7 +54,7 @@ const UserLoginForm = () => {
             <Modal isOpen={loginModalOpen}>
                 <ModalHeader toggle={() => setLoginModalOpen(false)}>Login</ModalHeader>
                     <ModalBody>
-                        <Formik initialValues={{username:'', password:''}} onSubmit={handleLogin} validate={validateLoginForm}>
+                        <Formik initialValues={{username:'', password:''}} onSubmit={handleLogin} validate={validateUserLoginForm}>
                             <Form>
                                 <FormGroup>
                                     <Label htmlFor='username'>
