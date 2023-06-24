@@ -3,7 +3,7 @@ import { Button, Modal, ModalHeader, FormGroup, Label, ModalBody } from 'reactst
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import { validateCommentForm } from "../../utils/validateCommentForm";
 import {useDispatch} from 'react-redux';
-import {addComment} from '../comments/commentsSlice';
+import {postComment} from '../comments/commentsSlice';
 
 const CommentForm = ({campsiteId}) => {
     const [modalOpen, setModalOpen] = useState(false);
@@ -19,7 +19,7 @@ const CommentForm = ({campsiteId}) => {
             date: new Date(Date.now()).toISOString()
         };
         console.log (comment);
-        dispatch(addComment(comment));
+        dispatch(postComment(comment));
         setModalOpen(false);
     }
 
